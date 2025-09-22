@@ -1,15 +1,18 @@
 package org.platzi;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("Calendario médico");
 
-        String nombre;
-        Doctor myDoctor = new Doctor();
-        myDoctor.especialidad = "Psicologo";
-        myDoctor.mostrarEspeciealidad();
+        //Se crea una instancia de la clase Doctor con el constructor
+        // que acepta parámetros
+        Doctor myDoctor = new Doctor(1, "David Lizondo", "Psicologo");
 
+        System.out.println("El Doctor asignado es: " + myDoctor.getName());
+        System.out.println("Su especialidad es: " + myDoctor.getSpeciality());
+
+        // También puedes usar los métodos de la clase Doctor
+        myDoctor.showName();
+        myDoctor.showSpeciality();
     }
 }

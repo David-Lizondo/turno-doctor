@@ -1,20 +1,33 @@
 package org.platzi;
 
 public class Doctor {
-    int id;
-    String nombre;
-    String especialidad;
+    private int id;
+    private String name;
+    private String speciality;
 
-    Doctor(){
-        System.out.println("tu Doctor asignado");
+    public Doctor(int id, String name, String speciality) {
+        this.id = id;
+        this.name = name;
+        this.speciality = speciality;
     }
-    Doctor(String nombre){
-        System.out.println("El médico es: " + nombre);
+
+    public int getId() {
+        return id;
     }
-    public void mostrarNombre() {
-        System.out.println(nombre);
+
+    public String getName() {
+        return name;
     }
-    public void mostrarEspeciealidad(){
-        System.out.println(especialidad);
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void showName() {
+        System.out.println(name);
+    }
+
+    public void showSpeciality() {
+        System.out.println(speciality);
     }
 }
